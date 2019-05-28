@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
+
+import {Typography, Paper, Grid, withStyles} from "@material-ui/core";
 
 const styles = theme => ({
     root: {
@@ -24,7 +23,9 @@ function TopBanner(props) {
         <div className={classes.root}>
             <Grid container spacing={3}>
                 <Grid item xs={12}>
-                    <Paper className={classes.paper}>Recipe Search</Paper>
+                    <Paper className={classes.paper}>
+                        <Typography variant="h4">Recipes</Typography>
+                    </Paper>
                 </Grid>
             </Grid>
         </div>
