@@ -12,7 +12,7 @@ const Recipes = props => {
                             {/*<div key={i}>*/}
                                 {/*<img src={recipe.recipe.image} alt={recipe.recipe.label}/>*/}
                                 {/*<p>{recipe.recipe.label}</p>*/}
-                                <MediaCard recipeName={recipe.recipe.label} recipeImage={recipe.recipe.image} recipeSource={recipe.recipe.source}/>
+                                <MediaCard recipeName={recipe.recipe.label} recipeImage={recipe.recipe.image} recipeSource={recipe.recipe.source} recipeId={i}/>
                             {/*</div>*/}
                         </Grid>
                     )

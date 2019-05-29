@@ -1,5 +1,15 @@
 import React from 'react';
-import {Card, CardActionArea, CardActions, CardContent, CardMedia, Button, Typography, makeStyles} from "@material-ui/core";
+import {
+    Card,
+    CardActionArea,
+    CardActions,
+    CardContent,
+    CardMedia,
+    Button,
+    Typography,
+    makeStyles
+} from "@material-ui/core";
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles({
     card: {
@@ -10,7 +20,7 @@ const useStyles = makeStyles({
     },
 });
 
-const MediaCard = props =>{
+const MediaCard = props => {
     const classes = useStyles();
 
     return (
@@ -23,7 +33,7 @@ const MediaCard = props =>{
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                        {props.recipeName}
+                        {props.recipeName.length < 20 ? props.recipeName : `${props.recipeName.substring(0, 20)}...`}
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
                         SOURCE: {props.recipeSource}
@@ -32,10 +42,7 @@ const MediaCard = props =>{
             </CardActionArea>
             <CardActions>
                 <Button size="small" color="primary">
-                    Share
-                </Button>
-                <Button size="small" color="primary">
-                    Learn More
+                    <Link to={{pathname: `/recipe/${props.recipeId}`, state: { recipe: props.recipeName }}} style={{textDecoration: 'none', color: '#2196f3'}}>View Recipe</Link>
                 </Button>
             </CardActions>
         </Card>
