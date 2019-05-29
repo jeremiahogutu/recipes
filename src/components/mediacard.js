@@ -3,14 +3,14 @@ import {Card, CardActionArea, CardActions, CardContent, CardMedia, Button, Typog
 
 const useStyles = makeStyles({
     card: {
-        maxWidth: 345,
+        minWidth: 300,
     },
     media: {
         height: 140,
     },
 });
 
-function MediaCard() {
+const MediaCard = props =>{
     const classes = useStyles();
 
     return (
@@ -18,16 +18,15 @@ function MediaCard() {
             <CardActionArea>
                 <CardMedia
                     className={classes.media}
-                    image="/static/images/cards/contemplative-reptile.jpg"
+                    image={props.recipeImage}
                     title="Contemplative Reptile"
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                        Lizard
+                        {props.recipeName}
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
+                        SOURCE: {props.recipeSource}
                     </Typography>
                 </CardContent>
             </CardActionArea>

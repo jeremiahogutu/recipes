@@ -5,7 +5,7 @@ const useStyles = makeStyles(theme => ({
     container: {
         display: 'flex',
         alignItems: 'center',
-        marginTop: '50px'
+        margin: '50px 0'
     },
     textField: {
         marginLeft: theme.spacing(1),
