@@ -32,6 +32,7 @@ const Form = props => {
         <form className={classes.container} onSubmit={props.getRecipe}>
             <TextField
                 id="standard-bare"
+                name="recipeName"
                 className={classes.textField}
                 margin="normal"
             />
