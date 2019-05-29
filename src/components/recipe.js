@@ -11,16 +11,13 @@ class Recipe extends Component {
         const title = this.props.location.state.recipe;
         const request = await fetch(`https://api.edamam.com/search?q=${title}&app_id=${process.env.REACT_APP_APP_ID}&app_key=${process.env.REACT_APP_API_KEY}`);
         const res = await request.json();
-        // console.log(res.hits[0])
         this.setState({
             activeRecipe: res.hits[0]
         });
-        console.log(this.state.activeRecipe)
     };
 
     render() {
         const recipe = this.state.activeRecipe;
-        console.log(recipe)
         return (
             <div style={{display: 'flex', justifyContent: 'center'}}>
                 {this.state.activeRecipe.length !== 0 &&
