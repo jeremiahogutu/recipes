@@ -34,6 +34,7 @@ const Form = props => {
                 id="standard-bare"
                 name="recipeName"
                 className={classes.textField}
+                helperText="Enter ingredient and click search! "
                 margin="normal"
             />
             <Button type="submit" variant="contained" color="primary">Search</Button>

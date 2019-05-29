@@ -42,7 +42,7 @@ const MediaCard = props => {
             </CardActionArea>
             <CardActions>
                 <Button size="small" color="primary">
-                    <Link to={{pathname: `/recipe/${props.recipeId}`, state: { recipe: props.recipeName }}} style={{textDecoration: 'none', color: '#2196f3'}}>View Recipe</Link>
+                    <Link to={{pathname: `/recipe/${props.recipeId}`, state: { recipe: props.recipeName }}} style={{textDecoration: 'none', color: '#2196f3'}}>{props.recipeButtonText}</Link>
                 </Button>
             </CardActions>
         </Card>
