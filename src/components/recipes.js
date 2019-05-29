@@ -5,7 +5,7 @@ import MediaCard from "./mediacard";
 const Recipes = props => {
     return (
         <div style={{maxWidth: '1100px'}}>
-            <Grid container spacing={3}>
+            <Grid container>
 
                 {props.recipes !== null && props.recipes.map((recipe, i) => {
                     return (
