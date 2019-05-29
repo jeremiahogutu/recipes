@@ -9,12 +9,15 @@ const Recipes = props => {
 
                 {props.recipes !== null && props.recipes.map((recipe, i) => {
                     return (
-                        <Grid key={i} item xs style={{display: 'flex', justifyContent: 'center', flexBasis: 'auto'}}>
-                            {/*<div key={i}>*/}
-                                {/*<img src={recipe.recipe.image} alt={recipe.recipe.label}/>*/}
-                                {/*<p>{recipe.recipe.label}</p>*/}
-                                <MediaCard style={{minwidth: 300}} recipeName={recipe.recipe.label} recipeImage={recipe.recipe.image} recipeSource={recipe.recipe.source} recipeButtonText='View Recipe' recipeId={i}/>
-                            {/*</div>*/}
+                        <Grid key={i} item xs style={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            flexBasis: 'auto',
+                            paddingBottom: '20px'
+                        }}>
+                            <MediaCard style={{minwidth: 300}} recipeName={recipe.recipe.label}
+                                       recipeImage={recipe.recipe.image} recipeSource={recipe.recipe.source}
+                                       recipeButtonText='View Recipe' recipeId={i}/>
                         </Grid>
                     )
                 })}
