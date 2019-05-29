@@ -36,7 +36,6 @@ const Form = props => {
                 margin="normal"
             />
             <Button type="submit" variant="contained" color="primary">Search</Button>
-            {/*<button>submit</button>*/}
         </form>
     );
 };
