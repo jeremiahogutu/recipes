@@ -36,6 +36,7 @@ const Form = props => {
                 className={classes.textField}
                 helperText="Enter ingredient and click search! "
                 margin="normal"
+                autoFocus
             />
             <Button type="submit" variant="contained" color="primary">Search</Button>
         </form>
