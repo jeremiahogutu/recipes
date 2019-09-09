@@ -23,17 +23,12 @@ class Recipe extends Component {
                 {this.state.activeRecipe.length !== 0 &&
                     <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'Column', alignItems: 'center', padding: '25px'}}>
                         <img style={{width: '100%'}} src={recipe.recipe.image} alt=""/>
-                        {/*<div>*/}
-                        {/*    <p>{recipe.recipe.ingredients}</p>*/}
-                        {/*</div>*/}
                         <h4>{recipe.recipe.label}</h4>
                         <ol>
                             {recipe.recipe.ingredients.map((ingredient, i) =>(
                                 <li key={i}>{ingredient.text}</li>
                             ))}
                         </ol>
-                        {/*<Button type="submit" variant="contained" color="primary">View Recipes</Button>*/}
-
                         <Button variant="contained" color="primary">
                             <Link to={{pathname: `/`}} style={{textDecoration: 'none', color: '#fff'}}>View Recipes</Link>
                         </Button>
